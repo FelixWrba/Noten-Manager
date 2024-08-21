@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noten Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <meta name="description"
+        content="Mithilfe diesem Noten Manager kannst du all deine schulischen Leistungen im Überblick behalten.">
+    <meta name="keywords" content="Noten Manager, Schule, Lernen, Leistungen, Überblick">
+    <link rel="manifest" href="manifest/manifest.json">
+    <link rel="shortcut icon" href="manifest/favicon32.jpg" type="image/x-icon">
+    <script src=".js/check.js"></script>
+</head>
+
+<body>
+    <div class="start-card" id="top">
+        <div>
+            <h1>Willkommen bei <span class="green">Noten Manager</span></h1>
+            <p>Hier kannst du all deine schulischen Leistungen im &Uuml;berblick behalten.</p>
+            <button onclick="showMain();">Jetzt loslegen!</button>
+        </div>
+    </div>
+    <main>
+        <h2><span class="green">W&auml;hle</span> deine F&auml;cher aus</h2>
+        <p>Aktiviere die Kontrollk&auml;stchen bei den F&auml;chern, die du in der Schule hast. Falls du eines vergisst,
+            kannst du es sp&auml;ter manuell hinzuf&uuml;gen.</p>
+        <form action="javascript:createTimeTable();">
+            <span>
+                <label for="german">Deutsch: </label>
+                <input type="checkbox" id="german">
+            </span>
+            <h3>Fremdsprachen</h3>
+            <span>
+                <label for="english">Englisch: </label>
+                <input type="checkbox" id="english">
+            </span>
+            <span>
+                <label for="french">Franz&ouml;sisch: </label>
+                <input type="checkbox" id="french">
+            </span>
+            <span>
+                <label for="latin">Latein: </label>
+                <input type="checkbox" id="latin">
+            </span>
+            <span>
+                <label for="greece">Altgriechisch: </label>
+                <input type="checkbox" id="greece">
+            </span>
+            <span>
+                <label for="spain">Spanisch: </label>
+                <input type="checkbox" id="spain">
+            </span>
+            <h3>MINT</h3>
+            <span>
+                <label for="maths">Mathe: </label>
+                <input type="checkbox" id="maths">
+            </span>
+            <span>
+                <label for="informathic">Informatik: </label>
+                <input type="checkbox" id="informathic">
+            </span>
+            <span>
+                <label for="natur">Naturwissenschaften: </label>
+                <input type="checkbox" id="natur">
+            </span>
+            <span>
+                <label for="tech">Technik: </label>
+                <input type="checkbox" id="tech">
+            </span>
+            <h3>Musisch</h3>
+            <span>
+                <label for="music">Musik:</label>
+                <input type="checkbox" id="music">
+            </span>
+            <span>
+                <label for="art">Kunst: </label>
+                <input type="checkbox" id="art">
+            </span>
+            <span>
+                <label for="religion">Etik / Religion: </label>
+                <input type="checkbox" id="religion">
+            </span>
+            <span>
+                <label for="pe">Sport: </label>
+                <input type="checkbox" id="pe">
+            </span>
+            <div id="addedSubjects"></div>
+            <span>
+                <label for="subject-add">Fach hinzuf&uuml;gen: </label>
+                <input type="text" id="subject-add" autocomplete="off">
+                <button type="button" onclick="addSubject(document.getElementById('subject-add').value);">+</button>
+            </span>
+            <button type="submit">Erstelle meinen Stundenplan</button>
+        </form>
+    </main>
+
+    <script src="js/welcome.js"></script>
+    <script src="js/check.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        }
+    </script>
+</body>
+
+</html>

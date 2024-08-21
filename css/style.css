@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font: 18px sans-serif;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: yellowgreen;
+    color: white;
+}

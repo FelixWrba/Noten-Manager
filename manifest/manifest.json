@@ -1,0 +1,45 @@
+{
+    "name": "Noten Manager",
+    "short_name": "Noten Manager",
+    "description": "Mithilfe diesem Noten Manager kannst du all deine schulischen Leistungen im Überblick behalten.",
+    "start_url": "/index.html",
+    "background_color": "#ffffff",
+    "theme_color": "#008000",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "favicon512.png",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "favicon256.jpg",
+            "sizes": "256x256"
+        },
+        {
+            "src": "favicon64.jpg",
+            "sizes": "64x64"
+        },
+        {
+            "src": "favicon32.jpg",
+            "sizes": "32x32"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "screenshot1.png",
+            "sizes": "1121x584",
+            "type": "image/gif",
+            "form_factor": "wide",
+            "label": "Manager"
+        },
+        {
+            "src": "screenshot2.png",
+            "sizes": "375x534",
+            "type": "image/gif",
+            "form_factor": "narrow",
+            "label": "Manager"
+        }
+    ]
+}

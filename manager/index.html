@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noten Management</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/manager.css">
+    <meta name="description"
+        content="Mithilfe diesem Noten Manager kannst du all deine schulischen Leistungen im Überblick behalten.">
+    <meta name="keywords" content="Noten Manager, Schule, Lernen, Leistungen, Überblick">
+    <link rel="manifest" href="/manifest/manifest.json">
+    <link rel="shortcut icon" href="/manifest/favicon32.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Manager</h1>
+    <div class="overflow">
+        <table class="mark-table"></table>
+        <p><label for="federalState">Bundesland: </label><input type="checkbox" id="federalState"
+                onclick="changeState();"> Bayern</p>
+    </div>
+    <div id="deleteWindow" onclick="document.getElementById('deleteWindow').style.display = 'none';"></div>
+
+    <script src="/js/manager.js"></script>
+    <script src="/js/check.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        }
+    </script>
+</body>
+
+</html>
