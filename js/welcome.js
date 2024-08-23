@@ -16,7 +16,6 @@ document.getElementById('top').scrollIntoView({ 'behavior': 'smooth' });
 let main = document.querySelector('main');
 // creates all the subjects that are needed for the manager
 let subjects = [
-    new Subject("Mathe", "maths"),
     new Subject("Englisch", "english"),
     new Subject("Französisch", "french"),
     new Subject("Latein", "latin"),
