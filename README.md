@@ -3,7 +3,7 @@
 Mit Noten Manger kannst deine schulischen Leistungen einsehen und Verwalten. Dafür brauchst du kein Konto oder eine App, denn alles läuft im Webbrowser. Außerdem ist es konstenlos und ohne Werbung.
 
 ## Benutzung
-Um Noten Manager nutzen zu können, besuche folgende Website: [Noten-Manager.com](https://noten-manager-test.netlify.app/). Es werden keine Daten erhoben. 
+Um Noten Manager nutzen zu können, besuche folgende Website: [noten-manager.com](https://noten-manager-test.netlify.app/). Es werden keine Daten erhoben. 
 
 
 ## Änderung und Bugfixes
