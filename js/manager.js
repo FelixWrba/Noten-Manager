@@ -1,7 +1,10 @@
+// assigns subjects as JSON from localStorage to the variable subjects 
 let subjects = JSON.parse(localStorage.getItem('subjects'));
+// does the same for marks
 let marks = JSON.parse(localStorage.getItem('marks'));
-let markTable;
-let HTMLTable;
+// declare the undefined variables markTable and HTMLTable
+let markTable, HTMLTable;
+
 let bavaria = JSON.parse(localStorage.getItem('bavaria'));
 if (bavaria == undefined || bavaria == null) bavaria = true;
 if (bavaria) document.getElementById('federalState').checked = true;

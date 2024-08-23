@@ -45,32 +45,38 @@ function addSubject(subjectAddName = undefined) {
         alert('Du must ein Fach eingeben!');
         return;
     }
-    // cancel adding if condition true
-    if (
-        // loop through subjects to check if subjectAddName in list
-        subjects.forEach(e => {
-            // if in list return true => cancels adding
-            if (e.id == subjectAddName) {
-                alert(`Das Fach ${subjectAddName} wurde bereites hinzugefügt!`);
-                return true;
-            }
-            // else continue with adding process
-            else return false;
-        })
-    ) return;
+    // cancel default: false (undefined)
+    let cancel;
+    // loop through subjects to check if subjectAddName in list
+    subjects.forEach(e => {
+        // if in list => cancel = true
+        if (e.id == subjectAddName) {
+            alert(`Das Fach ${subjectAddName} wurde bereites hinzugefügt!`);
+            cancel = true;
+        }
+        // else => cancel = false (undefined)
+    })
+    // cancels if cancel = true
+    if(cancel) return;
+    // adds Subject() to HTML using f-string
     document.getElementById('addedSubjects').innerHTML += `
     <span>
         <label for="${subjectAddName}">${subjectAddName}: </label>
         <input type="checkbox" id="${subjectAddName}" checked>
     </span>
     `;
+    // adds new Subject() to array subjects
     subjects.push(new Subject(subjectAddName));
 }
 
+// "Erstelle meinen Stundenplan" btn onclick => creates the timetable
 function createTimeTable() {
+    //  loops through subjects and selected = true => if in the document checkbox checked = true;
     subjects.forEach(e => {
         e.sel = document.getElementById(e.id).checked;
     });
+    // converts subjects to string and save it in the localStorage with the key: subjects
     localStorage.setItem("subjects", JSON.stringify(subjects));
+    // opens the page "<url>/manager/index.html"
     window.location.href = '/manager/';
 }
