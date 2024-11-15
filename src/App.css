@@ -1,0 +1,12 @@
+.homepage--header {
+  height: 200px;
+  background-color: #009900;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.homepage--header h1, p {
+  margin: 0;
+  margin-bottom: 20px;
+}

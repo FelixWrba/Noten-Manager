@@ -1,8 +1,9 @@
 import './App.css';
+import HomePage from './components/homepage/homepage';
 
 function App() {
   return (
-    <h1>Noten Manager</h1>
+    <HomePage />
   );
 }
 
