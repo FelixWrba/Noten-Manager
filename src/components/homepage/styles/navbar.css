@@ -1,0 +1,89 @@
+.homepage--navbar {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.homepage--navbar nav {
+    display: flex;
+    gap: 24px;
+}
+
+.homepage--navbar-logo {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.homepage--navbar-logo:hover {
+    text-decoration: none;
+}
+
+.homepage--navbar-logo img {
+    height: 3rem;
+    margin-right: 12px;
+}
+
+@media (max-width: 800px) {
+    .homepage--navbar nav {
+        display: none;
+    }
+    .homepage--navbar .homepage--navbar-menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    .homepage--navbar-logo {
+        font-size: 1.5rem;
+    }
+}
+
+.homepage--mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid black;
+    flex-direction: column;
+    gap: 0;
+}
+
+.homepage--mobile-nav::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+}
+
+.homepage--mobile-nav a {
+    padding: 12px;
+    transition: all .2s;
+}
+
+.homepage--mobile-nav a:hover {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.homepage--mobile-nav span {
+    padding: 12px;
+    background-color: #009900;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.homepage--navbar-menu-icon {
+    display: none;
+}
