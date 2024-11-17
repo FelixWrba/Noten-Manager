@@ -31,6 +31,7 @@
     .homepage--navbar nav {
         display: none;
     }
+
     .homepage--navbar .homepage--navbar-menu-icon {
         display: block;
     }
@@ -50,8 +51,19 @@
     height: 100vh;
     background-color: white;
     border-right: 1px solid black;
+    display: flex;
     flex-direction: column;
     gap: 0;
+    transform: translateX(-100%);
+    transition: all .3s;
+}
+
+.homepage--mobile-nav__open {
+    transform: translateX(0%);
+}
+
+.homepage--mobile-nav__open::before {
+    transform: translateX(0%) !important;
 }
 
 .homepage--mobile-nav::before {
@@ -62,6 +74,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     width: 100vw;
     height: 100vh;
+    transform: translateX(100%);
 }
 
 .homepage--mobile-nav a {

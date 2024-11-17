@@ -1,15 +1,15 @@
 import '../../App.css';
 import HeaderLogo from '../../assets/favicon.png';
-import { useState } from 'react';
+import { useRef } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
 function Navbar() {
-    const [navbarOpen, setNavbarOpen] = useState(false);
+    const navRef = useRef();
 
     const handleNavbar = () => {
-        setNavbarOpen(!navbarOpen);
+        navRef.current.classList.toggle('homepage--mobile-nav__open')
     }
 
     return (<>
@@ -28,7 +28,7 @@ function Navbar() {
                 <a href='/'>Startseite</a>
             </nav>
         </div>
-        <nav className='homepage--mobile-nav' style={{ display: navbarOpen ? 'flex' : 'none' }}>
+        <nav className='homepage--mobile-nav' ref={navRef}>
             <span>
                 Navigation
                 <button onClick={handleNavbar} className='icon-btn'>
