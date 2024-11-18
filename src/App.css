@@ -7,19 +7,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.homepage--header {
-  background-color: #009900;
-  color: white;
-  text-align: center;
-  padding: 3em 2em;
-}
-
-.homepage--header h1,
-p {
-  margin: 0;
-  margin-bottom: 20px;
-}
-
 .icon {
   cursor: pointer;
 }

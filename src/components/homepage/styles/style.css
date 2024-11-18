@@ -1,0 +1,33 @@
+.homepage--header {
+    background-color: #009900;
+    color: white;
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.homepage--header h1,
+p {
+    margin: 0;
+}
+
+.link-btn {
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 1.5em;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.link-btn:hover {
+    text-decoration: none;
+}

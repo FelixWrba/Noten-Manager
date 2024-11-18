@@ -1,4 +1,4 @@
-.homepage--navbar {
+.navbar {
     padding: 16px 24px;
     display: flex;
     align-items: center;
@@ -6,44 +6,44 @@
     border-bottom: 1px solid black;
 }
 
-.homepage--navbar nav {
+.navbar nav {
     display: flex;
     gap: 24px;
 }
 
-.homepage--navbar-logo {
+.navbar-logo {
     height: 2.5rem;
     display: flex;
     align-items: center;
     font-size: 2rem;
 }
 
-.homepage--navbar-logo:hover {
+.navbar-logo:hover {
     text-decoration: none;
 }
 
-.homepage--navbar-logo img {
+.navbar-logo img {
     height: 3rem;
     margin-right: 12px;
 }
 
 @media (max-width: 800px) {
-    .homepage--navbar nav {
+    .navbar nav {
         display: none;
     }
 
-    .homepage--navbar .homepage--navbar-menu-icon {
+    .navbar .navbar-menu-icon {
         display: block;
     }
 }
 
 @media (max-width: 450px) {
-    .homepage--navbar-logo {
+    .navbar-logo {
         font-size: 1.5rem;
     }
 }
 
-.homepage--mobile-nav {
+.mobile-nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,15 +58,15 @@
     transition: all .3s;
 }
 
-.homepage--mobile-nav__open {
+.mobile-nav__open {
     transform: translateX(0%);
 }
 
-.homepage--mobile-nav__open::before {
+.mobile-nav__open::before {
     transform: translateX(0%) !important;
 }
 
-.homepage--mobile-nav::before {
+.mobile-nav::before {
     content: '';
     position: fixed;
     top: 0;
@@ -77,17 +77,17 @@
     transform: translateX(100%);
 }
 
-.homepage--mobile-nav a {
+.mobile-nav a {
     padding: 12px;
     transition: all .2s;
 }
 
-.homepage--mobile-nav a:hover {
+.mobile-nav a:hover {
     text-decoration: none;
     background-color: #eee;
 }
 
-.homepage--mobile-nav span {
+.mobile-nav span {
     padding: 12px;
     background-color: #009900;
     color: #fff;
@@ -97,6 +97,6 @@
     border-bottom: 1px solid black;
 }
 
-.homepage--navbar-menu-icon {
+.navbar-menu-icon {
     display: none;
 }
