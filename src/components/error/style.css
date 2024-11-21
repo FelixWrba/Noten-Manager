@@ -1,0 +1,32 @@
+code {
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    font-style: oblique;
+    max-width: 400px;
+    overflow-wrap: anywhere;
+}
+
+.error-page {
+    box-sizing: border-box;
+    margin: 12px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.green-title {
+    color: #009900;
+}
+
+a {
+    text-decoration: underline;
+}
