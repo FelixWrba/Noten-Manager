@@ -2,6 +2,7 @@ import '../../App.css';
 import './styles/navbar.css'
 import HeaderLogo from '../../assets/favicon.png';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -23,10 +24,10 @@ function Navbar() {
                 <MenuIcon />
             </button>
             <nav>
-                <a href='/'>Startseite</a>
-                <a href='/'>Startseite</a>
-                <a href='/'>Startseite</a>
-                <a href='/'>Startseite</a>
+                <Link to='/'>Startseite</Link>
+                <Link to='/'>Startseite</Link>
+                <Link to='/'>Startseite</Link>
+                <Link to='/'>Startseite</Link>
             </nav>
         </div>
         <nav className='mobile-nav' ref={navRef}>
@@ -36,10 +37,10 @@ function Navbar() {
                     <CloseIcon sx={{ color: 'white' }} className='icon' />
                 </button>
             </span>
-            <a href='/'>Startseite</a>
-            <a href='/'>Startseite</a>
-            <a href='/'>Startseite</a>
-            <a href='/'>Startseite</a>
+            <Link to='/'>Startseite</Link>
+            <Link to='/'>Startseite</Link>
+            <Link to='/'>Startseite</Link>
+            <Link to='/'>Startseite</Link>
         </nav>
     </>);
 }

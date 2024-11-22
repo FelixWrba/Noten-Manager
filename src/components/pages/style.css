@@ -1,0 +1,10 @@
+.document {
+    margin: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.document a {
+    color: blue;
+    text-decoration: underline;
+}

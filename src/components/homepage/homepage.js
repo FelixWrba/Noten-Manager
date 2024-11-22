@@ -7,13 +7,15 @@ import FeatureCard from './featureCard';
 function HomePage() {
     return (<>
         <Navbar />
-        <Header />
 
-        <h2>Warum Noten Manager nutzen?</h2>
-        <div>
-            <FeatureCard title="Kostenlos" description="Noten Manager ist komplett gratis. Alle Features der App sind frei verfügbar." img="free.png" />
-        </div>
-        
+        <main>
+            <Header />
+            <h2>Warum Noten Manager nutzen?</h2>
+            <div>
+                <FeatureCard title="Kostenlos" description="Noten Manager ist komplett gratis. Alle Features der App sind frei verfügbar." img="free.png" />
+            </div>
+        </main>
+
         <Footer />
     </>);
 }

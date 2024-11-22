@@ -20,3 +20,34 @@ a:hover {
 .icon-btn:focus {
   outline: 2px solid blue;
 }
+
+main {
+  margin-top: 75px !important;
+}
+
+.link-btn {
+  width: fit-content;
+  margin-top: 20px;
+  border-radius: 1.5em;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #009900;
+  color: white;
+  font-size: .9em;
+  cursor: pointer;
+  transition: all .2s;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.link-btn:hover {
+  text-decoration: none;
+  filter: brightness(.9);
+}
+
+.link-btn--white {
+  background-color: #fff;
+  color: black;
+}

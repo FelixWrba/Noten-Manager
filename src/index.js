@@ -8,6 +8,7 @@ import {
 import './index.css';
 import App from './App';
 import ErrorPage from './components/error/ErrorPage';
+import Imprint from './components/pages/imprint';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/hello',
     element: <h1>HelLo, World!</h1>
+  },
+  {
+    path: '/imprint',
+    element: <Imprint />
   }
 ])
 
