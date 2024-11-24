@@ -10,6 +10,11 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
+    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0);
+    transition: all .2s;
+}
+
+.scrolled {
     box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.2);
 }
 

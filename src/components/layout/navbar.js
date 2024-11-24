@@ -1,7 +1,7 @@
 import '../../App.css';
 import './styles/navbar.css'
 import HeaderLogo from '../../assets/favicon.png';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -9,13 +9,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 function Navbar() {
     const navRef = useRef();
-
     const handleNavbar = () => {
         navRef.current.classList.toggle('mobile-nav__open')
     }
+    // show shadow at bottom of navbar if page is scrolled
+    const [isScrolled, setIsScrolled] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => setIsScrolled(window.scrollY > 0);
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (<>
-        <div className='navbar'>
+        <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
             <a href='/' className='navbar-logo'>
                 <img src={HeaderLogo} alt='Logo von Notenmanager' draggable='false' />
                 <span>Noten&nbsp;Manager</span>

@@ -23,6 +23,7 @@ a:hover {
 
 main {
   margin-top: 75px !important;
+  min-height: calc(100vh - 100px);
 }
 
 .link-btn {

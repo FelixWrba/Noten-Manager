@@ -12,3 +12,15 @@
 .footer p {
     margin-bottom: 1rem;
 }
+
+.title-bar {
+    box-sizing: border-box;
+    height: 75px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid black;
+    transition: all .2s;
+    font-size: 2rem;
+}

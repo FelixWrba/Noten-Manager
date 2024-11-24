@@ -8,3 +8,54 @@
     color: blue;
     text-decoration: underline;
 }
+
+.loader-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loader {
+    width: 70px;
+    height: 70px;
+    border: 5px solid #eee;
+    border-bottom-color: #009900;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(150deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-text {
+    width: fit-content;
+    font-size: 1rem;
+    font-family: monospace;
+    clip-path: inset(0 3ch 0 0);
+    animation: type 1s steps(4) infinite;
+}
+
+.loader-text:before {
+    content: "Loading..."
+}
+
+@keyframes type {
+    to {
+        clip-path: inset(0 -1ch 0 0)
+    }
+}
