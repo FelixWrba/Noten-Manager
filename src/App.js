@@ -1,5 +1,5 @@
 import './App.css';
-import Loader from './components/pages/Loader';
+import Loader from './components/pages/Loader.js';
 import {
 	BrowserRouter,
 	Route,
@@ -8,17 +8,17 @@ import {
 import React, { lazy, Suspense } from 'react';
 
 // Pages
-const Homepage = lazy(() => import('./components/homepage/Homepage'));
-const GetStarted = lazy(() => import('./components/app/GetStarted'));
-const Imprint = lazy(() => import('./components/pages/Imprint'));
-const NotFound = lazy(() => import('./components/error/NotFound'));
+const Homepage = lazy(() => import('./components/homepage/Homepage.js'));
+const GetStarted = lazy(() => import('./components/app/GetStarted.js'));
+const Imprint = lazy(() => import('./components/pages/Imprint.js'));
+const NotFound = lazy(() => import('./components/error/NotFound.js'));
 // App
-const Overview = lazy(() => import('./components/app/Overview'));
-const Sections = lazy(() => import('./components/app/Sections'));
-const Settings = lazy(() => import('./components/app/Settings'));
-const BottomNav = lazy(() => import('./components/layout/BottomNav'));
+const Overview = lazy(() => import('./components/app/Overview.js'));
+const Sections = lazy(() => import('./components/app/Sections.js'));
+const Settings = lazy(() => import('./components/app/Settings.js'));
+const BottomNav = lazy(() => import('./components/layout/BottomNav.js'));
 // Layout
-const PageLayout = lazy(() => import('./components/layout/PageLayout'));
+const PageLayout = lazy(() => import('./components/layout/PageLayout.js'));
 
 // Define General Routing and Error handling
 function App() {
