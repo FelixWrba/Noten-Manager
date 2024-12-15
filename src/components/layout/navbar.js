@@ -44,10 +44,10 @@ function Navbar() {
                     <CloseIcon sx={{ color: 'white' }} className='icon' />
                 </button>
             </span>
-            <Link to='/'>Startseite</Link>
-            <Link to='/'>Startseite</Link>
-            <Link to='/'>Startseite</Link>
-            <Link to='/'>Startseite</Link>
+            <Link to='/' onClick={handleNavbar}>Startseite</Link>
+            <Link to='/' onClick={handleNavbar}>Startseite</Link>
+            <Link to='/' onClick={handleNavbar}>Startseite</Link>
+            <Link to='/' onClick={handleNavbar}>Startseite</Link>
         </nav>
     </>);
 }

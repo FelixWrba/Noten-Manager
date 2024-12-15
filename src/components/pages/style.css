@@ -1,7 +1,9 @@
 .document {
     margin: 15px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+}
+
+.document p {
+    line-height: 1.65rem;
 }
 
 .document a {

@@ -1,5 +1,5 @@
 import './App.css';
-import Loader from './components/pages/loader';
+import Loader from './components/pages/Loader';
 import {
 	BrowserRouter,
 	Route,
@@ -8,15 +8,17 @@ import {
 import React, { lazy, Suspense } from 'react';
 
 // Pages
-const Homepage = lazy(() => import('./components/homepage/homepage'));
-const GetStarted = lazy(() => import('./components/app/get-started'));
-const Imprint = lazy(() => import('./components/pages/imprint'));
+const Homepage = lazy(() => import('./components/homepage/Homepage'));
+const GetStarted = lazy(() => import('./components/app/GetStarted'));
+const Imprint = lazy(() => import('./components/pages/Imprint'));
 const NotFound = lazy(() => import('./components/error/NotFound'));
 // App
-const Overview = lazy(() => import('./components/app/overview'));
-const Sections = lazy(() => import('./components/app/sections'));
-const Settings = lazy(() => import('./components/app/settings'));
-const BottomNav = lazy(() => import('./components/layout/bottomNav'));
+const Overview = lazy(() => import('./components/app/Overview'));
+const Sections = lazy(() => import('./components/app/Sections'));
+const Settings = lazy(() => import('./components/app/Settings'));
+const BottomNav = lazy(() => import('./components/layout/BottomNav'));
+// Layout
+const PageLayout = lazy(() => import('./components/layout/PageLayout'));
 
 // Define General Routing and Error handling
 function App() {
@@ -26,9 +28,9 @@ function App() {
 				<Routes>
 					{/* Root ------------------------------------------------- */}
 					<Route path='/'>
-						<Route index element={<Homepage />} />
-						<Route path='get-started' element={<GetStarted />} />
-						<Route path='imprint' element={<Imprint />} />
+						<Route index element={<PageLayout><Homepage /></PageLayout>} />
+						<Route path='get-started' element={<PageLayout title='Erste Schritte'><GetStarted /></PageLayout>} />
+						<Route path='imprint' element={<PageLayout><Imprint /></PageLayout>} />
 					</Route>
 					{/* App -------------------------------------------------- */}
 					<Route path='app' element={<BottomNav />}>

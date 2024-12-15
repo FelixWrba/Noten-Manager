@@ -1,5 +1,4 @@
 import './styles/style.css';
-const path = '/assets/featuresImg/';
 
 function FeatureCard(props) {
 

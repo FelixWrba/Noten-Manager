@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom';
 import ArrowBack from '@mui/icons-material/ArrowBack';
 import './styles/style.css';
 
 function TitleBar({ title }) {
     return (<header className='title-bar'>
-        <Link to='/'>
+        <span role='button' className='icon' onClick={() => window.history.back()}>
             <ArrowBack className='icon' />
-        </Link>
+        </span>
         <span>{title}</span>
     </header>)
 }
