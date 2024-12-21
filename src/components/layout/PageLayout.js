@@ -3,7 +3,6 @@ import Footer from "./Footer";
 import TitleBar from './TitleBar';
 
 function PageLayout({ title, children }) {
-    console.log(title)
     return (<>
         {
             // Replace Navbar with TitleBar if tile is defined

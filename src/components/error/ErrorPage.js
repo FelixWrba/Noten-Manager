@@ -1,11 +1,10 @@
 import { useRouteError, Link } from "react-router-dom";
 import './style.css';
-import Navbar from "../layout/navbar";
-import Footer from '../layout/footer'
+import Navbar from "../layout/Navbar";
+import Footer from '../layout/Footer';
 
 function ErrorPage() {
     const error = useRouteError();
-    console.error(error);
 
     return (<>
         <Navbar />

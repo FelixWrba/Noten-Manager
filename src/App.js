@@ -14,7 +14,7 @@ const Imprint = lazy(() => import('./components/pages/Imprint.js'));
 const NotFound = lazy(() => import('./components/error/NotFound.js'));
 // App
 const Overview = lazy(() => import('./components/app/Overview.js'));
-const Sections = lazy(() => import('./components/app/Sections.js'));
+const Subjects = lazy(() => import('./components/app/Subjects.js'));
 const Settings = lazy(() => import('./components/app/Settings.js'));
 const BottomNav = lazy(() => import('./components/layout/BottomNav.js'));
 // Layout
@@ -35,7 +35,7 @@ function App() {
 					{/* App -------------------------------------------------- */}
 					<Route path='app' element={<BottomNav />}>
 						<Route index element={<Overview />} />
-						<Route path='sections' element={<Sections />} />
+						<Route path='subjects' element={<Subjects />} />
 						<Route path='settings' element={<Settings />} />
 					</Route>
 					{/* 404 -------------------------------------------------- */}

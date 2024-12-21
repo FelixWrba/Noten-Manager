@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import './style.css';
 import Navbar from "../layout/Navbar";
-import Footer from '../layout/Footer'
+import Footer from '../layout/Footer';
 
-function ErrorPage() {
+function NotFound() {
     return (<>
         <Navbar />
         <main className="error-page">
@@ -16,4 +16,4 @@ function ErrorPage() {
     </>)
 }
 
-export default ErrorPage;
+export default NotFound;

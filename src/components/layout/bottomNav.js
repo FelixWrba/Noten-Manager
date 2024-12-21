@@ -15,7 +15,7 @@ function BottomNav() {
 
     const navLinks = [
         { path: '/app', label: 'Übersicht', icon: DashboardIcon, iconFill: DashboardIconFill },
-        { path: '/app/sections', label: 'Sektionen', icon: SectionsIcon, iconFill: SectionsIconFill },
+        { path: '/app/subjects', label: 'Fächer', icon: SectionsIcon, iconFill: SectionsIconFill },
         { path: '/app/settings', label: 'Einstellungen', icon: SettingsIcon, iconFill: SettingsIconFill },
     ];
 
