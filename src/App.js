@@ -12,9 +12,11 @@ const Homepage = lazy(() => import('./components/homepage/Homepage.js'));
 const GetStarted = lazy(() => import('./components/app/GetStarted.js'));
 const Imprint = lazy(() => import('./components/pages/Imprint.js'));
 const NotFound = lazy(() => import('./components/error/NotFound.js'));
+const ErrorPage = lazy(()=>import('./components/error/ErrorPage.js'));
 // App
 const Overview = lazy(() => import('./components/app/Overview.js'));
 const Subjects = lazy(() => import('./components/app/Subjects.js'));
+const Subject = lazy(() => import('./components/app/Subject.js'));
 const Settings = lazy(() => import('./components/app/Settings.js'));
 const BottomNav = lazy(() => import('./components/layout/BottomNav.js'));
 // Layout
@@ -27,19 +29,20 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					{/* Root ------------------------------------------------- */}
-					<Route path='/'>
+					<Route path='/' errorElement={<ErrorPage/>}>
 						<Route index element={<PageLayout><Homepage /></PageLayout>} />
 						<Route path='get-started' element={<PageLayout title='Erste Schritte'><GetStarted /></PageLayout>} />
 						<Route path='imprint' element={<PageLayout><Imprint /></PageLayout>} />
 					</Route>
 					{/* App -------------------------------------------------- */}
-					<Route path='app' element={<BottomNav />}>
+					<Route path='app' element={<BottomNav />} errorElement={<ErrorPage/>}>
 						<Route index element={<Overview />} />
 						<Route path='subjects' element={<Subjects />} />
+						<Route path='subjects/:subjectId' element={<Subject />} />
 						<Route path='settings' element={<Settings />} />
 					</Route>
 					{/* 404 -------------------------------------------------- */}
-					<Route path='*' element={<NotFound />} />
+					<Route path='*' element={<NotFound />} errorElement={<ErrorPage/>} />
 				</Routes>
 			</BrowserRouter>
 		</Suspense>

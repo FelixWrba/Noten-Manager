@@ -23,18 +23,18 @@ function Navbar() {
 
     return (<>
         <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-            <a href='/' className='navbar-logo'>
+            <Link to='/' className='navbar-logo'>
                 <img src={HeaderLogo} alt='Logo von Notenmanager' draggable='false' />
                 <span>Noten&nbsp;Manager</span>
-            </a>
+            </Link>
             <button onClick={handleNavbar} className='icon icon-btn navbar-menu-icon'>
                 <MenuIcon />
             </button>
             <nav>
                 <Link to='/'>Startseite</Link>
-                <Link to='/'>Startseite</Link>
-                <Link to='/'>Startseite</Link>
-                <Link to='/'>Startseite</Link>
+                <Link to='/imprint#contact'>Kontakt</Link>
+                <Link to='/imprint#about'>Über</Link>
+                <Link to='/app'>App</Link>
             </nav>
         </div>
         <nav className='mobile-nav' ref={navRef}>
@@ -44,10 +44,10 @@ function Navbar() {
                     <CloseIcon sx={{ color: 'white' }} className='icon' />
                 </button>
             </span>
-            <Link to='/' onClick={handleNavbar}>Startseite</Link>
-            <Link to='/' onClick={handleNavbar}>Startseite</Link>
-            <Link to='/' onClick={handleNavbar}>Startseite</Link>
-            <Link to='/' onClick={handleNavbar}>Startseite</Link>
+            <Link onClick={handleNavbar} to='/'>Startseite</Link>
+            <Link onClick={handleNavbar} to='/imprint#contact'>Kontakt</Link>
+            <Link onClick={handleNavbar} to='/imprint#about'>Über</Link>
+            <Link onClick={handleNavbar} to='/app'>App</Link>
         </nav>
     </>);
 }

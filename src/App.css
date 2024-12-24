@@ -26,6 +26,43 @@ main {
   min-height: calc(100vh - 100px);
 }
 
+.btn {
+  min-width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 1.5em;
+  padding: 8px 20px;
+  background-color: #009900;
+  color: white;
+  font-size: .9em;
+  cursor: pointer;
+  transition: all .3s;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+.btn.white {
+  background-color: #fff;
+  color: black;
+}
+
+.btn.light, .btn:disabled {
+  background-color: #eee;
+  color: black;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  filter: brightness(1);
+}
+
 .link-btn {
   width: fit-content;
   margin-top: 20px;
@@ -38,14 +75,14 @@ main {
   color: white;
   font-size: .9em;
   cursor: pointer;
-  transition: all .2s;
   text-decoration: none;
   transition: all .3s;
+  word-wrap: break-word;
 }
 
 .link-btn:hover {
   text-decoration: none;
-  filter: brightness(.9);
+  filter: brightness(0.9);
 }
 
 .link-btn--white {

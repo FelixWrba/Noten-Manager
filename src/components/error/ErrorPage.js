@@ -5,6 +5,7 @@ import Footer from '../layout/Footer';
 
 function ErrorPage() {
     const error = useRouteError();
+    document.title = 'Noten Manager - Fehlermeldung';
 
     return (<>
         <Navbar />

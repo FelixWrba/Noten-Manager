@@ -4,6 +4,7 @@ import Navbar from "../layout/Navbar";
 import Footer from '../layout/Footer';
 
 function NotFound() {
+    document.title = 'Noten Manager - Nicht gefunden';
     return (<>
         <Navbar />
         <main className="error-page">
