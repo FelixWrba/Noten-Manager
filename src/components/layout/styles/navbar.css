@@ -14,6 +14,7 @@
     border-bottom: 1px solid black;
     box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0);
     transition: all .2s;
+    overflow: auto;
 }
 
 .scrolled {
@@ -39,22 +40,6 @@
 .navbar-logo img {
     height: 3rem;
     margin-right: 12px;
-}
-
-@media (max-width: 800px) {
-    .navbar nav {
-        display: none;
-    }
-
-    .navbar .navbar-menu-icon {
-        display: block;
-    }
-}
-
-@media (max-width: 450px) {
-    .navbar-logo {
-        font-size: 1.5rem;
-    }
 }
 
 .mobile-nav {
@@ -113,4 +98,26 @@
 
 .navbar-menu-icon {
     display: none;
+}
+
+@media (max-width: 700px) {
+    .navbar nav {
+        display: none;
+    }
+
+    .navbar .navbar-menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar-logo {
+        font-size: 1.5rem;
+    }
+    .mobile-nav {
+        width: 80vw;
+    }
+    .mobile-nav::before {
+        left: 80vw;
+    }
 }

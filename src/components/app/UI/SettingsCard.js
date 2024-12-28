@@ -1,9 +1,17 @@
 import '../styles/settings.css';
 
-function SettingsCard({title, id, options}) {
-    return (<div className='settings-card'>
-        <h3 className='title'>{title}</h3>
-        {options.map(option => (<span>{option.title}</span>))}
+function SettingsCard({ title, preferred, options, getClick, address }) {
+    function handleClick() {
+        getClick(address);
+    }
+
+    function getOptionName(id) {
+        return options.find(option => option.id === id).title || -1;
+    }
+
+    return (<div className='settings-card' role='button' onClick={handleClick}>
+        <h3>{title}</h3>
+        <span>{getOptionName(preferred)}</span>
     </div>);
 }
 

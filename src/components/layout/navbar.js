@@ -8,15 +8,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 
 function Navbar() {
+    // references mobile Navbar, handleNavbar toggles its visibility
     const navRef = useRef();
     const handleNavbar = () => {
         navRef.current.classList.toggle('mobile-nav__open')
     }
+
     // show shadow at bottom of navbar if page is scrolled
     const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 0);
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
